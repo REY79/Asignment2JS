@@ -1,0 +1,257 @@
+* {
+	box-sizing: border-box;
+	margin: 0;
+}
+
+hr {
+  width: 100%;
+}
+
+body {
+  text-align: center;
+	background-color: lightgrey;
+  color: rgb(65, 57, 134);
+  background-image: element(canvas);
+}
+
+h1 {
+    font-family: 'Lobster', cursive;
+    font-size: 3rem;
+    padding: 1.5rem;
+    background-color: lightgrey(38, 218, 14);
+	  line-height: 3.6rem;
+	  margin: 0 0 1.2rem 0;
+}
+
+img {
+    border-style: none;
+    border-radius: 40%;
+	  padding: 1.5rem;
+}
+
+a, a:visited { color: darkblue; }
+
+.down {
+	height: 5rem;
+	font-family: 'Lobster', sans-serif;
+	font-size: 2rem;
+	color: blue;
+}  
+
+.down a{
+	border: 1px solid;
+	text-decoration:none;
+}
+
+.icons ul li{
+	list-style:none;
+  display: inline-block;
+  font-size: 3rem;
+}
+
+.icons ul li a {
+	text-decoration: none;
+	padding: 0 15px;
+	margin: 6px;
+	margin-right: 0;
+}
+
+.picture :hover {
+    border-style: none;
+    border-radius: 100%;
+    transition: background-size 0.3s ease;
+	  filter: grayscale(1);
+}
+
+.down a:hover {
+	background-color: darkblue;
+	color: lightgrey;
+}
+
+.icons ul li a:hover {
+  color: white;
+	background-color: darkblue;	
+}
+
+.topnav {
+	display: flex;
+  justify-content: center;
+}
+
+.menutopnav {
+	padding: .5em;
+}
+
+.menutopnav a {
+  color: rgb(129, 104, 187);
+  text-decoration: none;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.menutopnav a:hover {
+	background-color: darkblue;
+	color: lightgrey;
+}
+
+.site-wrapper {
+  margin: 0 auto;
+  max-width: 1024px;
+  min-height: 100vh;
+  padding: 20px;
+}
+
+h2 {
+  font-size: 2rem;
+  line-height: 2.4rem;
+  margin: 0 0 1.4rem 0;
+  padding-bottom: 1rem;
+}
+
+.heading-cv {
+  border-bottom: 2px solid #ddd;
+}
+
+
+p {
+  font-size: 1rem;
+  line-height: 1.4rem;
+}
+
+
+.section-cv {
+  margin: 5rem 0;
+}
+
+.section-row { 
+  display: flex;
+  margin-bottom: 2.4rem;
+}
+
+.section-col { 
+  flex: 1;
+  margin-right: 10px;
+}
+
+.col-1 { 
+  flex: 0;
+  flex-basis: 5rem; 
+}
+
+.col-2 {
+  flex: 8;
+}
+
+.col-3 {
+  flex: 3;
+}
+
+
+hr {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  border: 0;
+  border-top: 1px solid black;
+}
+
+.title {
+  width: 100vw;
+  margin: auto auto;
+  text-align: center;
+}
+
+.gallery-item {
+  max-width: 100%;
+  border-radius: 5px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.5);
+  transition: all .3s;
+  overflow: hidden;
+  position: relative;
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-gap: 1.5rem;
+  justify-items: center;
+}
+
+.image {
+  opacity: 1;
+  display: block;
+  width: 100%;
+  height: auto;
+  transition: .5s ease;
+  backface-visibility: hidden;
+  object-fit: cover;
+}
+
+.middle {
+  transition: .5s ease;
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.gallery-item:hover .image{
+  filter: grayscale(1);
+}
+
+.gallery-item:hover .middle {
+  opacity: 1
+};
+
+.gallery-item:hover {
+ box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+}
+
+.text {
+  color: white;
+  font-size: 2.5em;
+  padding: 16px 32px;
+  font-family: Oswald, sans-serif;
+}
+
+@media (max-width: 600px){
+
+  .gallery {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  }
+      .gallery-item {
+            max-width: 75%;
+            grid-column: 2;
+          }
+      div.containger, h1 {
+            text-align: left;
+            margin-left: 2em;
+      }
+      div.text{
+            font-size: 2.5em;
+      }
+}
+
+
+
+.google_form {
+  margin: 0px auto;
+  display: flex;
+  justify-content: center;
+}
+
+iframe{
+  min-height: 800px;
+
+}
+
+
+canvas {
+  background-color: black;
+  position: absolute;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+  z-index:-1;
+}
